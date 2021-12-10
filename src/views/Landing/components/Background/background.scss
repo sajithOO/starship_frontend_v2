@@ -1,0 +1,24 @@
+.landing-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    .landing-background-blobs-top {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        opacity: 0.4;
+        // z-index: 1;
+        img {
+            width: 1920px;
+            height: 1080px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .landing-background {
+        display: none;
+    }
+}

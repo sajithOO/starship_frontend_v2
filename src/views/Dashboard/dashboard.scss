@@ -1,0 +1,113 @@
+.dashboard-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 89%;
+    max-width: 833px;
+    margin: auto;
+    .dashboard-infos-wrap {
+        .dashboard-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+            @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+                background: rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(100px);
+            }
+            /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+            @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+                background: #181B1C;
+            }
+            border-radius: 10px;
+            padding: 13px 0;
+            .card-title {
+                font-family: Montserrat Medium;
+                font-weight: 500;
+                font-size: 20px;
+                color: rgba(255, 255, 255, 0.6);
+            }
+            .card-value {
+                font-family: Montserrat Bold;
+                font-weight: bold;
+                font-size: 24px;
+                font-weight: bold;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+.landing-main-btns-wrap {
+    display: flex;
+    flex-direction: row;
+    .landing-main-btn {
+        margin: 0 15px;
+        padding: 14px 26px;
+        min-width: 200px;
+        background: #232323;
+        box-shadow: 0px 0px 10px rgba(44, 39, 109, 0.1);
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+        p {
+            font-family: Montserrat Semibold;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .landing-main {
+        .landing-main-btns-wrap {
+            flex-direction: column;
+            .landing-main-btn {
+                margin: 15px;
+            }
+        }
+    }
+}
+
+.dashboard-card-no-display-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        background: transparent;
+        backdrop-filter: blur(100px);
+    }
+    /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        background: transparent;
+    }
+    border-radius: 10px;
+    padding: 13px 0;
+    .card-title {
+        font-family: Montserrat Medium;
+        font-weight: 500;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .card-value {
+        font-family: Montserrat Bold;
+        font-weight: bold;
+        font-size: 24px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+}
+
+#link {
+    text-decoration: none;
+}
